@@ -7,6 +7,4 @@ RUN npm install
 
 COPY . .
 
-RUN npm rebuild better-sqlite3
-
 CMD ["node", "main.js"]

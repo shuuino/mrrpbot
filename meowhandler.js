@@ -10,7 +10,7 @@ var wonderlist = [`wo-wondahoyy..~`, `wonderhoy~!!`, `wondahoyyy!!! >_<`, `wonde
 var wanMatch = [/^(w+o{2,}f+)/, /^(bark)+/, /^(a+r+f+)/, /^(w?r+u+f+)/, /^(wan)+/];
 var yellingWanMatch = [/^(W+O{2,}F+)/, /^(BARK)+/, /^(A+R+F+)/, /^(W?R+U+F+)/, /^(WAN)+/];
 var nyaMatch = [/^(m(r{2,})p)/, /^(m(e+)(o+)w)/, /^(p(u+)(r{2,}))/, /^(m(e+)(w+))/, /^(nya)/, /^((ps+))/, /^(m(i+)(a+)(u+))/, /^(m(y+)(a+)(u+))/];
-var yellingNyaMatch = [/^(M(R{2,})P)/, /^(M(E+)(O+)W)/, /^(P(U+)(R{2,}))/, /^(M(E+)(W+))/, /^(N(Y+)(A+))/, /^((ps+))/, /^(M(I+)(A+)(U+))/,  /^(M(Y+)(A+)(U+))/];
+var yellingNyaMatch = [/^(M(R{2,})P)/, /^(M(E+)(O+)W)/, /^(P(U+)(R{2,}))/, /^(M(E+)(W+))/, /^(N(Y+)(A+))/, /^((PS+))/, /^(M(I+)(A+)(U+))/,  /^(M(Y+)(A+)(U+))/];
 
 function validMeow(isOtherAnimal, message) {
 	let meowBack = nyaList[Math.floor(Math.random()*nyaList.length)]; //random selection of meow, but is sometimes the same (i think its fine tho :3)

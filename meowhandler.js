@@ -1,7 +1,7 @@
 const { addToMeowDb } = require('./filemanagement.js');
 
 //these are a list of things the bot can respond with, not actually things that it's searching for. see regex expression below
-var nyaList = ['mrrp', 'mrrrp', 'mrrrrp', 'mrrrrrp', 'meow', 'nya', 'mrow', 'mrrow', 'mrrrow', 'mrrrrow', 'mew', 'purr', 'purrr', 'purrrr', 'purrrrr']; 
+var nyaList = ['mrrp', 'mrrrp', 'mrrrrp', 'mrrrrrp', 'meow', 'nya', 'mrow', 'mrrow', 'mrrrow', 'mrrrrow', 'mew', 'purr', 'purrr', 'purrrr', 'purrrrr', 'miau', 'miauu', 'myau', 'myauu']; 
 var nyaKaomoji = [' :3', ' >w<', ' >_<', ' >_<;;', ' >.<', ' (๑╹ω╹๑ )', ' ^^', `>.<<~`];
 var unsureList = ['um,, ', 'uhh.. ', 'ettooo,. ']; //response intros for other animals - anne <3
 var wonderlist = [`wo-wondahoyy..~`, `wonderhoy~!!`, `wondahoyyy!!! >_<`, `wonder... hoyyy!! >.<<~`, `wo-wonderhoy..?`, `minna~ isshonii ikuyo.. se~ no~ WONDAHOYYY~!!!`];
@@ -9,8 +9,8 @@ var wonderlist = [`wo-wondahoyy..~`, `wonderhoy~!!`, `wondahoyyy!!! >_<`, `wonde
 //these are the things that the bot actually matches to, in arrays of regexes
 var wanMatch = [/^(w+o{2,}f+)/, /^(bark)+/, /^(a+r+f+)/, /^(w?r+u+f+)/, /^(wan)+/];
 var yellingWanMatch = [/^(W+O{2,}F+)/, /^(BARK)+/, /^(A+R+F+)/, /^(W?R+U+F+)/, /^(WAN)+/];
-var nyaMatch = [/^(m(r{2,})p)/, /^(m(e+)(o+)w)/, /^(p(u+)(r{2,}))/, /^(m(e+)(w+))/, /^(nya)/, /^((ps+))/];
-var yellingNyaMatch = [/^(M(R{2,})P)/, /^(M(E+)(O+)W)/, /^(P(U+)(R{2,}))/, /^(M(E+)(W+))/, /^(N(Y+)(A+))/, /^((ps+))/];
+var nyaMatch = [/^(m(r{2,})p)/, /^(m(e+)(o+)w)/, /^(p(u+)(r{2,}))/, /^(m(e+)(w+))/, /^(nya)/, /^((ps+))/, /^(m(i+)(a+)(u+))/, /^(m(y+)(a+)(u+))/];
+var yellingNyaMatch = [/^(M(R{2,})P)/, /^(M(E+)(O+)W)/, /^(P(U+)(R{2,}))/, /^(M(E+)(W+))/, /^(N(Y+)(A+))/, /^((ps+))/, /^(M(I+)(A+)(U+))/,  /^(M(Y+)(A+)(U+))/];
 
 function validMeow(isOtherAnimal, message) {
 	let meowBack = nyaList[Math.floor(Math.random()*nyaList.length)]; //random selection of meow, but is sometimes the same (i think its fine tho :3)
